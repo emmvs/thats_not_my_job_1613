@@ -2,6 +2,13 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+# Sidekiq
+gem "sidekiq", "~> 7"
+gem "sidekiq-failures"
+
+# For API calls
+gem "httparty"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.3"
 

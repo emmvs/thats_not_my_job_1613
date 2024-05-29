@@ -132,6 +132,9 @@ GEM
       sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.1)
@@ -158,6 +161,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.23.1)
     msgpack (1.7.2)
+    multi_xml (0.6.0)
     mutex_m (0.2.0)
     net-imap (0.4.11)
       date
@@ -256,6 +260,13 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sidekiq (7.2.2)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.19.0)
+    sidekiq-failures (1.0.4)
+      sidekiq (>= 4.0.0)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -310,6 +321,7 @@ DEPENDENCIES
   dotenv-rails
   error_highlight (>= 0.4.0)
   font-awesome-sass (~> 6.1)
+  httparty
   importmap-rails
   jbuilder
   pg (~> 1.1)
@@ -318,6 +330,8 @@ DEPENDENCIES
   redis (>= 4.0.1)
   sassc-rails
   selenium-webdriver
+  sidekiq (~> 7)
+  sidekiq-failures
   simple_form!
   sprockets-rails
   stimulus-rails

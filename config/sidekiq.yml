@@ -1,0 +1,10 @@
+:concurrency: 3 # Specifies that Sidekiq can run up to 3 jobs concurrently
+:timeout: 60 # Sets the max amount of time a worker can take to finish after receiving a stop signal (before failing)
+:verbose: true # Enables verbose output in the logs, providing more detailed logging infos
+:queues:
+  # Queue priority:
+  # https://github.com/sidekiq/sidekiq/wiki/Advanced-Options
+  - default
+  - mailers
+  - active_storage_analysis
+  - active_storage_purge

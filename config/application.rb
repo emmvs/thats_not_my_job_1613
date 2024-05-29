@@ -22,6 +22,9 @@ module ThatsNotMyJob1613
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w(assets tasks))
 
+    # Sidekiq
+    config.active_job.queue_adapter = :sidekiq # Also others, like Resque (also based on Redis)
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
